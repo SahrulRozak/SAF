@@ -1,0 +1,56 @@
+.login {
+    min-height: 100vh;
+  }
+  
+  .bg-image {
+    background-image: url(../images/bg-login.jpeg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .login-heading {
+    font-weight: 300;
+  }
+  
+  .btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .login-text {
+      margin-bottom: 20px;
+      padding: 0;
+  }
+
+  .user {
+      margin-top: 10px;
+  }
+  .pass {
+      margin-top: 10px;
+  }
+
+  .text a {
+      text-align: left !important;
+      align-items: right;
+      margin-bottom: 20px;
+      padding: 0;
+  }
+  
+  .alert {
+      padding: 10px;
+      border: 1px solid;
+  }
+
+  .alert-eror {
+      background-color: #FABEC0;
+      border: 1px solid #E43D40;
+      color: #E43D40;
+  }
+
+  .credit {
+      font-size: 14px;
+      align-content: end;
+      color: gray;
+      margin-top: 120px;
+  }
