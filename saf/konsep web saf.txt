@@ -1,0 +1,229 @@
+u8p7hStudi Kasus => Website Baru SAF
+
+Frontend	: HTML dan CSS, Bootstrap
+Backend		: PHP
+Text Editor	: Sublime Text / Notepad++ / Visual Studio Code / Dreamweaver atau yang lainnya
+Web Server	: XAMPP 7.3
+
+Pengguna	: 1 User
+		  2 Super Admin
+		  3 Admin
+
+
+STRUKTUR DATABASE
+-------------------------------------------
+# Database => db_saf
+
+# profil
+===========================================
+1 id			| int (11) primary key auto increment
+2 sejarah		| varchar (100)
+3 visi			| varchar (50)
+4 misi			| varchar (50)
+5 arti_logo		| text
+6 logo			| varchar (50)
+7 created_at		| timestamp
+8 updated_at		| datetime null
+
+#pengurus
+===========================================
+1 id			| int (11) primary key auto increment
+2 nama			| varchar (30)
+3 jabatan		| varchar (30)
+4 foto			| varchar (30)
+5 created_at		| timestamp
+6 updated_at		| datetime null	
+
+#biografi_pengurus
+===========================================
+1 id			| int (11) primary key auto increment
+2 nama			| varchar (30)
+3 jabatan		| varchar (30)
+4 foto			| varchar (30)
+5 keterangan		| text
+6 created_at		| timestamp
+7 updated_at		| datetime null
+
+#berita
+===========================================
+1 id			| int (11) primary key auto increment
+2 judul			| varchar (30)
+3 foto			| varchar (30)
+4 penulis		| varchar (30)
+5 isi			| text
+6 kategori		| varchar (30)
+7 tag			| varchar (30)		 
+8 created_at		| timestamp
+9 updated_at		| datetime null
+
+#artikel
+===========================================
+1 id			| int (11) primary key auto increment
+2 judul			| varchar (30)
+4 foto			| varchar (30)
+4 penulis		| varchar (30)
+3 isi			| text
+4 kategori		| varchar (30)
+4 tag			| varchar (30)		 
+6 created_at		| timestamp
+7 updated_at		| datetime null	
+
+#hasil_penelitian
+===========================================
+1 id			| int (11) primary key auto increment
+2 judul			| varchar (30)
+4 foto			| varchar (30)
+4 isi			| varchar (30)
+3 keterangan		| text
+4 kategori		| varchar (30)
+4 tag			| varchar (30)		 
+6 created_at		| timestamp
+7 updated_at		| datetime null	
+
+#jurnal
+===========================================
+1 id			| int (11) primary key auto increment
+2 judul			| varchar (30)
+4 foto			| varchar (30)
+4 penulis		| varchar (30)
+3 isi			| text
+4 kategori		| varchar (30)
+4 tag			| varchar (30)		 
+6 created_at		| timestamp
+7 updated_at		| datetime null	
+
+# galeri
+===========================================
+1 id			| int (11) primary key auto increment
+2 foto			| varchar (50)
+3 keterangan		| varchar (50)
+4 created_at		| timestamp
+5 updated_at		| datetime null
+
+# agenda_terlaksana
+===========================================
+1 id			| int (11) primary key auto increment
+2 foto			| varchar (50)
+2 judul			| varchar (100)
+3 keterangan		| text
+4 created_at		| timestamp
+5 updated_at		| datetime null
+
+# kampung_gotong_royong
+===========================================
+1 id			| int (11) primary key auto increment
+2 foto			| varchar (50)
+2 judul			| varchar (100)
+3 keterangan		| text
+4 created_at		| timestamp
+5 updated_at		| datetime null
+
+# diskusi_publik
+===========================================
+1 id			| int (11) primary key auto increment
+2 foto			| varchar (50)
+2 judul			| varchar (100)
+3 keterangan		| text
+4 created_at		| timestamp
+5 updated_at		| datetime null
+
+# perpustakaan_desa
+===========================================
+1 id			| int (11) primary key auto increment
+2 foto			| varchar (50)
+2 judul			| varchar (100)
+3 keterangan		| text
+4 created_at		| timestamp
+5 updated_at		| datetime null
+
+# rumah_buku
+===========================================
+1 id			| int (11) primary key auto increment
+2 foto			| varchar (50)
+2 judul			| varchar (100)
+3 keterangan		| text
+4 created_at		| timestamp
+5 updated_at		| datetime null
+
+# relawan_anak_desa
+===========================================
+1 id			| int (11) primary key auto increment
+2 foto			| varchar (50)
+2 judul			| varchar (100)
+3 keterangan		| text
+4 created_at		| timestamp
+5 updated_at		| datetime null
+
+# event
+===========================================
+1 id			| int (11) primary key auto increment
+2 nama			| varchar (100)
+2 foto			| varchar (50)
+3 keterangan		| text
+4 created_at		| timestamp
+5 updated_at		| datetime null
+
+
+# pengaturan
+===========================================
+1 id			| int (11) primary key auto increment
+2 nama			| varchar (50)
+3 email			| varchar (50)
+4 telepon		| varchar (20)
+5 alamat		| text
+6 logo			| varchar (50)
+7 favicon		| varchar (50)
+8 tentang		| text
+9 foto_saf		| varchar (50)
+10 google_maps		| text
+13 sambutan_kep	        | text
+14 created_at		| timestamp
+15 updated_at		| datetime null
+
+
+MENU
+--------------------------------------------
+1 User			: - Beranda
+			  - Tentang Kami
+			    + Profil [ Tanpa Database ]
+			    + Pengurus 
+                            + Biografi
+			  - Berita & Artikel
+			  - Riset
+			    + Hasil Penelitian
+			    + Jurnal
+			  - publikasi
+			    + Galeri
+			    + Agenda Terlaksana
+			  - Program
+			    + Kampung Gotong Royong
+			    + Diskusi Publik
+			    + Perpustakaan Desa
+			    + Rumah Buku
+			    + Relawan Anak Desa
+			  - Event
+			    + Kongres Nasional Anak Desa
+			    + Webinar
+
+2 Super Admin		: - Login
+			  - Dashboard
+			  - Data Pengguna (create, read, update, delete)
+			  - Ubah Password
+			  - Keluar
+
+2 Admin			: - Login
+			  - Dashboard
+			  - Data Informasi [ profil, pengurus, Biografi ]  (create, read, update, delete)
+			  - Buat Postingan [ Berita & Artikel ] (create, read, update, delete)
+			  - Data Riset [ Kajian Sosial, Hasil Penelitian, Jurnal ] (create, read, update, delete)
+			  - Data Publikasi [Galeri, Agenda Terlaksana] (create, read, update, delete)
+			  - Data Program [ Kampung Gotong Royong, Perpusdes, RB, RAD ( Update )
+			  - Data Informasi pengurus, Biografi,  (create, read, update, delete)
+			  - Event [KNAD, Webinar, Diskusi Publik ] (create, read, update, delete)
+			  - Tentang SAF (update)
+			  - Kanda Suwaib ( Pembina ) (update)
+			  - Ubah Password
+			  - Keluar
+
+
+<<================== Selamat Mengerjakan ===================>
